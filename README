@@ -1,0 +1,11 @@
+Creats a <ul class="crud_links"> with links as list items.
+Use like so: <%= CrudLinks.new(self, @controller, @link_options).to_html {yield :yr_blk} %>
+
+Options are +controller_name+ and +hide+.
+
+ To change behavior in a view: 
+
+ crudlinks(:hide => true, :controller_name => 'foo') do
+   link_to 'home', admin_path
+   link_to 'vacation', vacation_path
+ end
